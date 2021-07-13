@@ -1,0 +1,9 @@
+Simple example of making a MONGO Database
+
+Create a new database, or make an existing database active, with the use command:
+
+use movies
+
+Example of inserting a record:
+
+movies.new_movies.insert({"_id":1, "title":"Dunkirk})
