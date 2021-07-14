@@ -1,0 +1,5 @@
+MongoDB collections provide a function named insert(), which is used to create a new document in a collection. The function is executed on the collection and takes the document to be inserted as an argument. The syntax of this function is shown in the next command:
+
+Copy
+db.collection.insert( <Document To Be Inserted>)
+
