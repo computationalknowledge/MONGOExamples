@@ -1,0 +1,7 @@
+db.users.insertMany([
+  {"_id": 2, "name": "Jon Snow", "email": "Jon.Snow@got.es"},
+  {"_id": 3, "name": "Joffrey Baratheon", "email":     "Joffrey.Baratheon@got.es"},
+  {"_id": 5, "name": "Margaery Tyrell", "email":     "Margaery.Tyrell@got.es"},
+  {"_id": 6, "name": "Khal Drogo", "email": "Khal.Drogo@got.es"}
+])
+{ "acknowledged" : true, "insertedIds" : [ 2, 3, 5, 6 ] }
