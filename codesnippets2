@@ -20,3 +20,12 @@ db.users.replaceOne(
   {"name": "Tommen Baratheon", "email": "Tommen.Baratheon@got.es"},
   { upsert: true }
 )
+
+
+db.movies.insertMany([
+    { "_id": 1011, "title" : "Macbeth" },
+    { "_id": 1513, "title" : "Macbeth" },
+    { "_id": 1651, "title" : "Macbeth" },
+    { "_id": 1819, "title" : "Macbeth" },
+    { "_id": 2117, "title" : "Macbeth" }
+])
