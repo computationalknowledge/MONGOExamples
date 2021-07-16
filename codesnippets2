@@ -49,3 +49,29 @@ db.movies.findOneAndReplace(
         returnNewDocument : true
     }
 )
+
+
+var movie = db.movies.findOne({"title" : "The Italian"})
+// A replace function that keeps all the fields same except "year"
+db.movies.replaceOne(
+  {"title" : "The Italian"},
+  {
+    "plot" : movie.plot,
+    "genres" : movie.genres,
+    "runtime" : movie.runtime,
+    "rated" : movie.rated,
+    "cast" : movie.cast,
+    "title" : movie.title,
+    "fullplot" : movie.fullplot,
+    "language" : movie.language,
+    "released" : movie.released,
+    "directors" : movie.directors,
+    "writers" : movie.writers,
+    "awards" : movie.awards,
+    "imdb" : movie.imdb,
+    "countries" : movie.countries,
+    "type" : movie.type,
+    "tomatoes" : movie.tomatoes,
+    "year" : 1915
+  }
+)
