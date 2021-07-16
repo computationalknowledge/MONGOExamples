@@ -6,6 +6,17 @@ db.users.insertMany([
 ])
  
 db.users.replaceOne(
-  {"name": "Margaery Tyrell },
+  {"name": "Margaery Tyrell" },
   {"name": "Margaery Baratheon", "email": "Margaery.Baratheon@got.es"}
+)
+
+db.users.replaceOne(
+  {"name" : "Margaery Baratheon"},
+  {"name": "Margaery Tyrell", "email": "Margaery.Tyrell@got.es"},
+  { upsert: true }
+)
+db.users.replaceOne(
+  {"name" : "Tommen Baratheon"},
+  {"name": "Tommen Baratheon", "email": "Tommen.Baratheon@got.es"},
+  { upsert: true }
 )
