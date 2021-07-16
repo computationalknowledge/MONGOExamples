@@ -38,3 +38,14 @@ db.movies.findOneAndReplace(
         projection : {"_id" : 0}
     }
 )
+
+
+db.movies.findOneAndReplace(
+    {"title" : "Macbeth"},
+    {"title" : "Macbeth", "latest" : true},
+    {
+        sort : {"_id" : -1},
+        projection : {"_id" : 0},
+        returnNewDocument : true
+    }
+)
