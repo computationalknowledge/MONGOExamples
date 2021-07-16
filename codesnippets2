@@ -29,3 +29,12 @@ db.movies.insertMany([
     { "_id": 1819, "title" : "Macbeth" },
     { "_id": 2117, "title" : "Macbeth" }
 ])
+
+db.movies.findOneAndReplace(
+    {"title" : "Macbeth"},
+    {"title" : "Macbeth", "latest" : true},
+    {
+        sort : {"_id" : -1},
+        projection : {"_id" : 0}
+    }
+)
