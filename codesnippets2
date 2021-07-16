@@ -4,4 +4,8 @@ db.users.insertMany([
   {"_id": 5, "name": "Margaery Tyrell", "email":     "Margaery.Tyrell@got.es"},
   {"_id": 6, "name": "Khal Drogo", "email": "Khal.Drogo@got.es"}
 ])
-{ "acknowledged" : true, "insertedIds" : [ 2, 3, 5, 6 ] }
+ 
+db.users.replaceOne(
+  {"name": "Margaery Tyrell },
+  {"name": "Margaery Baratheon", "email": "Margaery.Baratheon@got.es"}
+)
